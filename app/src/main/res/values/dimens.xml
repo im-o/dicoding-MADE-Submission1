@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="size_toolbar">50dp</dimen>
+    <dimen name="size_margin_top">9dp</dimen>
+    <dimen name="size_margin_top_low">3dp</dimen>
+    <dimen name="size_text_low">10sp</dimen>
+</resources>

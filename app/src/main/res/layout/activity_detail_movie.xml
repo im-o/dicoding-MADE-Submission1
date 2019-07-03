@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailMovieActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/ab_movie_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/tb_movie_detail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_toolbar"
+                android:background="@color/colorAccent"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+                <TextView
+                    android:textSize="18sp"
+                    android:id="@+id/tv_movie_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="Detail Movie"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.AppBarLayout>
+
+        <ImageView
+            android:id="@+id/img_movie_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ab_movie_detail"
+            android:scaleType="centerCrop"
+            tools:src="@drawable/poster_avengerinfinity" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ab_movie_detail"
+            android:background="@color/colorTrasparant3" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ab_movie_detail"
+            android:background="@color/colorTrasparantBlack" />
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/ab_movie_detail">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+
+                <android.support.design.card.MaterialCardView
+                    android:id="@+id/card_movie_detail_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:strokeColor="@android:color/white">
+
+                    <ImageView
+                        android:id="@+id/img_movie_detail_photo"
+                        android:layout_width="150dp"
+                        android:layout_height="220dp"
+                        android:scaleType="centerCrop"
+                        tools:src="@drawable/poster_avengerinfinity" />
+                </android.support.design.card.MaterialCardView>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/card_movie_detail_photo"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_movie_detail_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:text="Avenger - Seven Fold" />
+
+                    <TextView
+                        android:id="@+id/tv_movie_detail_release"
+                        style="@style/TextAppearance.MaterialComponents.Caption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_movie_detail_title"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/size_text_low"
+                        tools:text="12 Desember 2019" />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_genre"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_movie_detail_release"
+                        android:layout_marginTop="@dimen/size_margin_top"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/tv_movie_detail_genres"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginEnd="3dp"
+                            android:background="@drawable/bg_round"
+                            android:maxLines="1"
+                            tools:text="Cinematic, War, Film"
+                            android:textSize="@dimen/size_text_low" />
+
+                        <TextView
+                            android:layout_marginTop="@dimen/size_margin_top"
+                            android:id="@+id/tv_movie_detail_rating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_below="@+id/tv_movie_detail_genres"
+                            android:background="@drawable/bg_round"
+                            android:drawableEnd="@drawable/ic_star_black_24dp"
+                            android:drawablePadding="3dp"
+                            tools:text="8.0"
+                            android:textSize="@dimen/size_text_low" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/rl_genre"
+                        android:layout_marginTop="@dimen/size_margin_top"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@android:color/darker_gray" />
+                        <TextView
+                            android:textStyle="bold"
+                            android:layout_marginTop="@dimen/size_margin_top_low"
+                            android:textColor="@android:color/white"
+                            android:text="@string/txt_desc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:id="@+id/tv_movie_detail_desc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/size_margin_top"
+                            android:textColor="@android:color/white"
+                            tools:text="@string/lorem" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
